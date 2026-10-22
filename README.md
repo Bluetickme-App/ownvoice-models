@@ -5,8 +5,10 @@ This release is a **converted copy** of
 `5fdea974cd4287c61674951ec78803aa274e2fb7` (`model.safetensors` sha256
 `c024a1704c65f5a4bffeda58745c58fc0ed67d6ca07b158b068a257238815265`), itself a fine-tune of
 [`microsoft/deberta-v3-large`](https://huggingface.co/microsoft/deberta-v3-large). Both are published under
-the **MIT licence** (declared in their model cards; neither repository has a separate LICENSE file). The
-upstream model card is included unchanged as `UPSTREAM-MODEL-CARD.md`.
+the **MIT licence** (declared in their model cards; neither upstream repository has a separate LICENSE file).
+The MIT text with the copyright lines of Microsoft Corporation (DeBERTa-v3) and Desklib (the fine-tuned
+detector) is in `LICENSE`, at the top of this repository and next to the model files, so it travels with every
+copy. The upstream model card is included unchanged as `UPSTREAM-MODEL-CARD.md`.
 
 It is not trained or fine-tuned further. Only the format and number precision were changed:
 
@@ -20,7 +22,7 @@ Mean difference from the fp32 export on 188 held-out paragraphs: about 0.003 in 
 
 | Asset | Path in the model directory |
 | --- | --- |
-| `config.json`, `tokenizer.json`, `tokenizer_config.json`, `special_tokens_map.json`, `added_tokens.json` | same name |
+| `LICENSE`, `config.json`, `tokenizer.json`, `tokenizer_config.json`, `special_tokens_map.json`, `added_tokens.json` | same name |
 | `model_quantized.onnx` | `onnx/model_quantized.onnx` |
 
 Used by OwnVoice's `local` detector (`packages/detector`), which downloads these assets at image build time
